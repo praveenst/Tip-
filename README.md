@@ -1,4 +1,4 @@
-# tipper
+# TIP$
 mobile tip calculator
 
 # Pre-work - Tip$
