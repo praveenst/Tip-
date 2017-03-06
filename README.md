@@ -1,6 +1,3 @@
-# TIP$
-mobile tip calculator
-
 # Pre-work - Tip$
 
 Tip$ is a tip calculator application for iOS.
@@ -30,7 +27,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+[Imgur](http://i.imgur.com/EYytMzL.gifv)
+
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
