@@ -21,11 +21,11 @@ class SettingsViewController: UIViewController {
         switch (tipSegmentControl.selectedSegmentIndex) {
             
         case 0:
-            self.view.backgroundColor = UIColor.lightGray
+            self.view.backgroundColor = UIColor.white
         case 1:
-            self.view.backgroundColor = UIColor.gray
+            self.view.backgroundColor = UIColor.lightGray
         case 2:
-            self.view.backgroundColor = UIColor.darkGray
+            self.view.backgroundColor = UIColor.gray
         default:
             self.view.backgroundColor = UIColor.clear
         }

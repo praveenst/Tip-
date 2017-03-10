@@ -1,4 +1,4 @@
-//
+
 //  ViewController.swift
 //  tipper
 //
@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     let userDefaults = UserDefaults.standard
-    
+    let currFormatter = NumberFormatter()
+
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var totalDollarLabel: UILabel!
@@ -26,10 +27,26 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         getUserDefaults()
         billField.becomeFirstResponder()
-        
 
     }
-    
+
+    @IBAction func changeCurrencyFormatOnEditEnd(_ sender: Any) {
+        
+        currFormatter.usesGroupingSeparator = true
+        
+        //currency style
+        currFormatter.numberStyle = NumberFormatter.Style.currency
+        
+        // localize to your grouping and decimal separator
+        currFormatter.locale = Locale.current
+        
+        // Displays double value in the US locale
+        billField.text = currFormatter.string(from: Double(billField.text!) as NSNumber? ?? 0)
+        
+        self.calculateTip(nil)
+    }
+
+
     private func getUserDefaults() {
         
         let bgColVal = userDefaults.integer(forKey: "bg-color")
@@ -39,11 +56,11 @@ class ViewController: UIViewController {
         
         switch (bgColVal) {
         case 0:
-            self.view.backgroundColor = UIColor.lightGray
+            self.view.backgroundColor = UIColor.white
         case 1:
-            self.view.backgroundColor = UIColor.gray
+            self.view.backgroundColor = UIColor.lightGray
         case 2:
-            self.view.backgroundColor = UIColor.darkGray
+            self.view.backgroundColor = UIColor.gray
         default:
             self.view.backgroundColor = UIColor.clear
         }
@@ -55,6 +72,8 @@ class ViewController: UIViewController {
         getUserDefaults()
         billField.becomeFirstResponder()
         print("view will appear")
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -78,7 +97,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-  
 
 
     @IBAction func onTap(_ sender: Any) {
@@ -87,11 +105,13 @@ class ViewController: UIViewController {
         //print("Hello");
     }
     
-    @IBAction func calculateTip(_ sender: AnyObject) {
+    @IBAction func calculateTip(_ sender: AnyObject? = nil) {
         
         let tipPercentages = [0.18, 0.20, 0.25];
         
-        let bill = Double(billField.text!) ?? 0;
+        let bill = currFormatter.number(from: billField.text!)?.doubleValue ?? 0
+        
+        //let bill = Double(billField.text!) ?? 0;
         let tip = bill * tipPercentages[tipPercentControl.selectedSegmentIndex];
         let total = bill + tip;
         let size = partySizeStepper.value;
