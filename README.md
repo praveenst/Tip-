@@ -25,19 +25,16 @@ The following **additional** features that are Not implemented in v1
 
 ## Video Walkthrough 
 
-Here's a walkthrough of implemented user stories:
-[Tip$ App V3 Demo](http://i.imgur.com/7XPbStR.gifv)
-[Tip$ App V2 Demo](http://i.imgur.com/M47eT5l.gifv)
-[Tip$ App V1 Demo](http://i.imgur.com/EYytMzL.gifv)
-
-
-
+-  Video walkthrough of implemented user stories:
+  - [Tip$ App V3 Demo](http://i.imgur.com/7XPbStR.gifv)
+  - [Tip$ App V2 Demo](http://i.imgur.com/M47eT5l.gifv)
+  - [Tip$ App V1 Demo](http://i.imgur.com/EYytMzL.gifv)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Good opportunity to learn Swift and play with XCode, The biggest learning was to learn UI design and Swift at the same time. 
 
 ## License
 
