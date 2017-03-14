@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     let userDefaults = UserDefaults.standard
     let currFormatter = NumberFormatter()
 
+    @IBOutlet var tipView: UIView!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var totalDollarLabel: UILabel!
@@ -27,6 +28,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         getUserDefaults()
         billField.becomeFirstResponder()
+        tipView.layer.borderWidth = 1
+        tipView.layer.cornerRadius = 10
+        tipView.layer.borderColor = UIColor.black.cgColor
 
     }
 

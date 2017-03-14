@@ -20,12 +20,13 @@ The following **optional** features are implemented:
 The following **additional** features that are Not implemented in v1
 
 * [x] Default tip settings will be indicated by color in homepage [white -18% | lightgray - 20% and gray - 25%]
-* [ ] UI animations
+* [x] Minimal UI animations with image icons 
 
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
+[Tip$ App V3 Demo](http://i.imgur.com/7XPbStR.gifv)
 [Tip$ App V2 Demo](http://i.imgur.com/M47eT5l.gifv)
 [Tip$ App V1 Demo](http://i.imgur.com/EYytMzL.gifv)
 
